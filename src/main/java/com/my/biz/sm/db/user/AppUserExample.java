@@ -1,4 +1,4 @@
-package com.my.biz.sm.user.db;
+package com.my.biz.sm.db.user;
 
 import java.util.ArrayList;
 import java.util.Date;

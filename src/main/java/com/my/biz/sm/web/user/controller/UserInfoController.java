@@ -10,8 +10,8 @@ import com.my.biz.sm.commons.controller.WebConstants;
 import com.my.biz.sm.commons.page.Page;
 import com.my.biz.sm.commons.page.PageData;
 import com.my.biz.sm.commons.page.PageParam;
-import com.my.biz.sm.user.model.AppUser;
-import com.my.biz.sm.user.service.AppUserService;
+import com.my.biz.sm.model.user.AppUser;
+import com.my.biz.sm.service.user.AppUserService;
 import com.my.biz.sm.web.user.vo.SysUserVo;
 
 @Controller

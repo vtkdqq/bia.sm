@@ -1,4 +1,4 @@
-package com.my.biz.sm.user.db;
+package com.my.biz.sm.db.user;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.github.miemiedev.mybatis.paginator.domain.PageBounds;
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
-import com.my.biz.sm.user.model.AppUser;
+import com.my.biz.sm.model.user.AppUser;
 
 public interface AppUserDao
 {

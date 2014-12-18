@@ -62,7 +62,7 @@
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.my.biz.sm.user.db" />
+		<property name="basePackage" value="com.my.biz.sm.db" />
 		<property name="nameGenerator">
 			<bean class="org.springframework.beans.factory.support.DefaultBeanNameGenerator"></bean>
 		</property>
@@ -106,7 +106,7 @@
 	</tx:advice>
 	<aop:config>
 		<aop:pointcut id="transactionPointcut"
-			expression="execution(* com.my.biz.sm..*impl.*(..))" />
+			expression="execution(* com.my.biz.sm.service..*impl.*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice" />
 	</aop:config>

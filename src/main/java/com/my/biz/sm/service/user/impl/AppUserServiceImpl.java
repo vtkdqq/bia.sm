@@ -1,4 +1,4 @@
-package com.my.biz.sm.user.service.impl;
+package com.my.biz.sm.service.user.impl;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,10 +9,10 @@ import com.github.miemiedev.mybatis.paginator.domain.PageList;
 import com.my.biz.sm.commons.page.PageConvertor;
 import com.my.biz.sm.commons.page.PageData;
 import com.my.biz.sm.commons.page.PageParam;
-import com.my.biz.sm.user.db.AppUserDao;
-import com.my.biz.sm.user.db.AppUserExample;
-import com.my.biz.sm.user.model.AppUser;
-import com.my.biz.sm.user.service.AppUserService;
+import com.my.biz.sm.db.user.AppUserDao;
+import com.my.biz.sm.db.user.AppUserExample;
+import com.my.biz.sm.model.user.AppUser;
+import com.my.biz.sm.service.user.AppUserService;
 
 @Service("appUserService")
 public class AppUserServiceImpl implements AppUserService

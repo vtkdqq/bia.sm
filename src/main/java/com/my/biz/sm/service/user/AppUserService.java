@@ -1,8 +1,8 @@
-package com.my.biz.sm.user.service;
+package com.my.biz.sm.service.user;
 
 import com.my.biz.sm.commons.page.PageData;
 import com.my.biz.sm.commons.page.PageParam;
-import com.my.biz.sm.user.model.AppUser;
+import com.my.biz.sm.model.user.AppUser;
 
 public interface AppUserService
 {

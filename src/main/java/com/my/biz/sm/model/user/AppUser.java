@@ -1,4 +1,4 @@
-package com.my.biz.sm.user.model;
+package com.my.biz.sm.model.user;
 
 import java.util.Date;
 
