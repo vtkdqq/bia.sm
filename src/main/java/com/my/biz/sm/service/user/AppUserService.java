@@ -14,4 +14,11 @@ public interface AppUserService
      * @return 返回结果PageData<AppUser>
      */
     public PageData<AppUser> pageQueryAppUser(PageParam<AppUser> page);
+
+    /**
+     * 新增用户
+     * @param appUser 用户对像
+     * @return Integer
+     */
+    public Integer addAppUser(AppUser appUser);
 }

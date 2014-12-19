@@ -37,5 +37,12 @@ public class AppUserServiceImpl implements AppUserService
         PageList<AppUser> list = appUserDao.selectByExample(example, pb);
         return PageConvertor.toPageData(list);
     }
+    
+    
+    @Override
+    public Integer addAppUser(AppUser appUser)
+    {
+        return appUserDao.insert(appUser);
+    }
 
 }

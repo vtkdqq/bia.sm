@@ -9,12 +9,12 @@
 	<div class="block p10">
 		<!-- 搜索栏 -->
 	    <div class="row pull-right" style="height: 50px;">
-           <form action="${root}/vote/voteList"  method ="post" class="form-inline query">
+           <form action="${root}/user/voteList"  method ="post" class="form-inline query">
               <label>用户名称：<input type="text" placeholder="请输入用户名称" style="width: 210px;" aria-controls="example" name="name" id="name" value="${vote.name}"/></label>
               <button class="btn btn-success" type="submit"  style="margin-left: 20px;">检&nbsp;&nbsp;索<i class=" icon-search icon-white"></i></button>
           </form>
 	    </div>
-        <a href="${root}/vote/editVote" keys="1005302" class="btn btn-success" id="add_ad">添加新用户<i class="icon icon-plus icon-white"></i></a>
+        <a href="${root}/user/userAdd" keys="1005302" class="btn btn-success" id="add_ad">添加新用户<i class="icon icon-plus icon-white"></i></a>
         <table class="table table-striped table-bordered mt10" >
             <thead>
                 <tr role="row">
@@ -66,27 +66,27 @@
 						</td>
 						<td class="operation">
 							<a href="javascript:;" onclick="edit(${dataItem.id});">
-							 	<img src="<s:url value='/css/images/operation/pencil.png'/>" title="修改用户信息"/>
+							 	<img src="${root}/res/img/admin/pencil.png" title="修改用户信息"/>
 							 </a>
 							 
 							 <c:choose>
 								<c:when test="${dataItem.status==0}">
 									 <a href="javascript:;" onclick="changeUserStatus(${dataItem.id},1);">
-		                            	<img src="<s:url value='/css/images/operation/lock_unlock.png'/>" title="启用用户"/>
+		                            	<img src="${root}/res/img/admin/lock_unlock.png" title="启用用户"/>
 		                            </a>
 								</c:when>					
 								<c:otherwise>
 		                            <a href="javascript:;" onclick="changeUserStatus(${dataItem.id},0);">
-		                            	<img src="<s:url value='/css/images/operation/lock.png'/>" title="禁用用户"/>
+		                            	<img src="${root}/res/img/admin/lock.png" title="禁用用户"/>
 		                            </a>
 								</c:otherwise>
 							</c:choose>
 							
 							 <a href="javascript:;" onclick="userRoleSet(${dataItem.id});">
-							 	<img src="<s:url value='/css/images/operation/member.png'/>" title="用户权限"/>
+							 	<img src="${root}/res/img/admin/member.png" title="用户权限"/>
 							 </a>   
 							 <a href="javascript:;" onclick="delUser(${dataItem.id},'${dataItem.username}');">
-							 	<img src="<s:url value='/css/images/operation/trashcan_delete.png'/>" title="删除用户"/>
+							 	<img src="${root}/res/img/admin/trashcan_delete.gif" title="删除用户"/>
 							 </a>
 							                 
 						</td>
@@ -97,7 +97,7 @@
         </table>
         <c:if test="${!empty data.pageData}">
                 <jsp:include page="/common/page.jsp" flush="true">
-                        <jsp:param name="pageUrl" value="${root}/vote/voteList"/>
+                        <jsp:param name="pageUrl" value="${root}/user/list"/>
                 </jsp:include>
         </c:if>
     </div>
