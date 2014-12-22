@@ -86,10 +86,8 @@ var APIPATH = "${pageScope.basePath}";
 			</div>
 			<ul class="nav-sed" style="display: none;">
 				<li><a href="${root}/user/list"  target="mainFrame">用户列表</a></li>
-				<li><a href="${pageScope.basePath}sys/menu/list/"  target="mainFrame">模块管理</a></li>
-				<li><a href="${pageScope.basePath}sys/role/list/"  target="mainFrame">角色管理</a></li>							
-				<li><a href="${pageScope.basePath}sys/log/operLogList/" target="mainFrame">日志列表</a></li>
-				<li><a href="https://www.umeng.com/sso/login?service=http://www.umeng.com/users/login_redirect" target="_blank">友盟统计</a></li>
+				<li><a href="${root}/menu/list?parentid=0"  target="mainFrame">模块管理</a></li>
+				<li><a href="${root}/role/list/"  target="mainFrame">角色管理</a></li>							
 			</ul>
 		</div>
 		

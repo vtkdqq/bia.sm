@@ -29,15 +29,6 @@
             <tbody role="alert" aria-live="polite" aria-relevant="all">
             	<c:forEach items="${data.pageData}" var="dataItem" varStatus="rowStatus" >
                     <tr>
-                    <c:choose>
-						<c:when test="${rowStatus.index%2==0}">
-							<tr class="odd">
-						</c:when>												
-						<c:otherwise>
-							<tr class="even">
-						</c:otherwise>
-					</c:choose>
-						
 						<td>
 						<input type="checkbox" name="cbitem" value="${dataItem.id }"/>
 						</td>

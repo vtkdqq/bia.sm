@@ -4,7 +4,7 @@ import java.util.Date;
 
 import com.my.biz.sm.BaseModel;
 
-public class AppUser extends BaseModel
+public class UserInfo extends BaseModel
 {
     /**
      * serialVersionUID

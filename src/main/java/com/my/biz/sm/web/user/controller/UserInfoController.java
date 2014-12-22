@@ -13,20 +13,20 @@ import com.my.biz.sm.commons.page.Page;
 import com.my.biz.sm.commons.page.PageData;
 import com.my.biz.sm.commons.page.PageParam;
 import com.my.biz.sm.commons.vo.AjaxJson;
-import com.my.biz.sm.model.user.AppUser;
-import com.my.biz.sm.service.user.AppUserService;
+import com.my.biz.sm.model.user.UserInfo;
+import com.my.biz.sm.service.user.UserInfoService;
 
 @Controller
 @RequestMapping("/user")
 public class UserInfoController {
 	@Autowired
-	private AppUserService appUserService;
+	private UserInfoService appUserService;
 
 	@RequestMapping(value = "list")
-	public String list(Page p, AppUser appUser, Model model) {
-		PageParam<AppUser> param = new PageParam<AppUser>(appUser,
+	public String list(Page p, UserInfo appUser, Model model) {
+		PageParam<UserInfo> param = new PageParam<UserInfo>(appUser,
 				p.getPageNo(), p.getPageSize());
-		PageData<AppUser> data = appUserService.pageQueryAppUser(param);
+		PageData<UserInfo> data = appUserService.pageQueryAppUser(param);
 		model.addAttribute("data", data);
 		model.addAttribute("vo", appUser);
 
@@ -38,10 +38,10 @@ public class UserInfoController {
 		return "user/user_edit";
 	}
 	
-	// 添加投票
-    @RequestMapping("saveUserInfo")
+	// 添加用户
+    @RequestMapping("saveAppUser")
     @ResponseBody
-    public AjaxJson saveUserInfo(AppUser appUser, Model model, HttpServletRequest request)
+    public AjaxJson saveAppUser(UserInfo appUser, Model model, HttpServletRequest request)
     {
         AjaxJson json = new AjaxJson();
         Integer flag = appUserService.addAppUser(appUser);
@@ -56,14 +56,14 @@ public class UserInfoController {
 
 	@RequestMapping("/userEdit")
 	public String userEdit(Model model, Integer id) {
-		AppUser user = appUserService.getAppUserById(id);
+		UserInfo user = appUserService.getAppUserById(id);
 		model.addAttribute("user", user);
 		return "user/user_edit";
 	}
 
 	@RequestMapping(value = "/login", method = { RequestMethod.GET })
 	public String login() {
-		AppUser user = appUserService.getAppUserById(1);
+		UserInfo user = appUserService.getAppUserById(1);
 		if (null != user) {
 			System.out.println("------->" + user.getUsername());
 		}

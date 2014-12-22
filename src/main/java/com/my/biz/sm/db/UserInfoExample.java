@@ -1,10 +1,10 @@
-package com.my.biz.sm.db.user;
+package com.my.biz.sm.db;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class AppUserExample
+public class UserInfoExample
 {
     protected String orderByClause;
 
@@ -12,7 +12,7 @@ public class AppUserExample
 
     protected List<Criteria> oredCriteria;
 
-    public AppUserExample()
+    public UserInfoExample()
     {
         oredCriteria = new ArrayList<Criteria>();
     }

@@ -8,14 +8,14 @@ $(document).ready(function() {
 });
 </script>
 <ul class="breadcrumb">
-    <li><a href="${root}/user/list">用户列表</a> <span class="divider">/</span></li>
-    <li class="active">${empty vote.id ?'新增用户':'修改用户'}</li>
+    <li><a href="${root}/user/list">菜单列表</a> <span class="divider">/</span></li>
+    <li class="active">${empty vote.id ?'新增菜单':'修改菜单'}</li>
 </ul>
 	<div class="block">
         <div class="block-content collapse in">
             <div class="span12">
 			<!-- BEGIN FORM-->
-			<form action="${root}/user/${empty user.id?'saveAppUser':'updateVote'}" id="form_sample_1" class="form-horizontal" target="ajax" novalidate="novalidate">
+			<form action="${root}/user/${empty meunu.id?'saveMeunuInfo':'updateVote'}" id="form_sample_1" class="form-horizontal" target="ajax" novalidate="novalidate">
 				<input type="hidden" id="id" name="id" value="${vote.id}" />
 				<input type="hidden" id="createUserid" name="createUserid" value="${sysUserVo.id}" />
 				<fieldset>		
