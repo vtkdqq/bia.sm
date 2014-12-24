@@ -1,10 +1,10 @@
-package com.my.biz.sm.db;
+package com.my.biz.sm.db.sys;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class RoleExample
+public class UserInfoExample
 {
     protected String orderByClause;
 
@@ -12,7 +12,7 @@ public class RoleExample
 
     protected List<Criteria> oredCriteria;
 
-    public RoleExample()
+    public UserInfoExample()
     {
         oredCriteria = new ArrayList<Criteria>();
     }
@@ -196,87 +196,171 @@ public class RoleExample
             return (Criteria) this;
         }
 
-        public Criteria andRolenameIsNull()
+        public Criteria andUsernameIsNull()
         {
-            addCriterion("roleName is null");
+            addCriterion("userName is null");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameIsNotNull()
+        public Criteria andUsernameIsNotNull()
         {
-            addCriterion("roleName is not null");
+            addCriterion("userName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameEqualTo(String value)
+        public Criteria andUsernameEqualTo(String value)
         {
-            addCriterion("roleName =", value, "rolename");
+            addCriterion("userName =", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameNotEqualTo(String value)
+        public Criteria andUsernameNotEqualTo(String value)
         {
-            addCriterion("roleName <>", value, "rolename");
+            addCriterion("userName <>", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameGreaterThan(String value)
+        public Criteria andUsernameGreaterThan(String value)
         {
-            addCriterion("roleName >", value, "rolename");
+            addCriterion("userName >", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameGreaterThanOrEqualTo(String value)
+        public Criteria andUsernameGreaterThanOrEqualTo(String value)
         {
-            addCriterion("roleName >=", value, "rolename");
+            addCriterion("userName >=", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameLessThan(String value)
+        public Criteria andUsernameLessThan(String value)
         {
-            addCriterion("roleName <", value, "rolename");
+            addCriterion("userName <", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameLessThanOrEqualTo(String value)
+        public Criteria andUsernameLessThanOrEqualTo(String value)
         {
-            addCriterion("roleName <=", value, "rolename");
+            addCriterion("userName <=", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameLike(String value)
+        public Criteria andUsernameLike(String value)
         {
-            addCriterion("roleName like", value, "rolename");
+            addCriterion("userName like", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameNotLike(String value)
+        public Criteria andUsernameNotLike(String value)
         {
-            addCriterion("roleName not like", value, "rolename");
+            addCriterion("userName not like", value, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameIn(List<String> values)
+        public Criteria andUsernameIn(List<String> values)
         {
-            addCriterion("roleName in", values, "rolename");
+            addCriterion("userName in", values, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameNotIn(List<String> values)
+        public Criteria andUsernameNotIn(List<String> values)
         {
-            addCriterion("roleName not in", values, "rolename");
+            addCriterion("userName not in", values, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameBetween(String value1, String value2)
+        public Criteria andUsernameBetween(String value1, String value2)
         {
-            addCriterion("roleName between", value1, value2, "rolename");
+            addCriterion("userName between", value1, value2, "username");
             return (Criteria) this;
         }
 
-        public Criteria andRolenameNotBetween(String value1, String value2)
+        public Criteria andUsernameNotBetween(String value1, String value2)
         {
-            addCriterion("roleName not between", value1, value2, "rolename");
+            addCriterion("userName not between", value1, value2, "username");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordIsNull()
+        {
+            addCriterion("passWord is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordIsNotNull()
+        {
+            addCriterion("passWord is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordEqualTo(String value)
+        {
+            addCriterion("passWord =", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordNotEqualTo(String value)
+        {
+            addCriterion("passWord <>", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordGreaterThan(String value)
+        {
+            addCriterion("passWord >", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordGreaterThanOrEqualTo(String value)
+        {
+            addCriterion("passWord >=", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordLessThan(String value)
+        {
+            addCriterion("passWord <", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordLessThanOrEqualTo(String value)
+        {
+            addCriterion("passWord <=", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordLike(String value)
+        {
+            addCriterion("passWord like", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordNotLike(String value)
+        {
+            addCriterion("passWord not like", value, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordIn(List<String> values)
+        {
+            addCriterion("passWord in", values, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordNotIn(List<String> values)
+        {
+            addCriterion("passWord not in", values, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordBetween(String value1, String value2)
+        {
+            addCriterion("passWord between", value1, value2, "password");
+            return (Criteria) this;
+        }
+
+        public Criteria andPasswordNotBetween(String value1, String value2)
+        {
+            addCriterion("passWord not between", value1, value2, "password");
             return (Criteria) this;
         }
 
@@ -498,9 +582,9 @@ public class RoleExample
     }
 
     /**
-     * This class was generated by MyBatis Generator. This class corresponds to the database table t_app_role
+     * This class was generated by MyBatis Generator. This class corresponds to the database table t_app_user
      * 
-     * @mbggenerated do_not_delete_during_merge Mon Dec 22 16:50:40 CST 2014
+     * @mbggenerated do_not_delete_during_merge Wed Dec 17 17:06:20 CST 2014
      */
     public static class Criteria extends GeneratedCriteria
     {
@@ -512,9 +596,9 @@ public class RoleExample
     }
 
     /**
-     * This class was generated by MyBatis Generator. This class corresponds to the database table t_app_role
+     * This class was generated by MyBatis Generator. This class corresponds to the database table t_app_user
      * 
-     * @mbggenerated Mon Dec 22 16:50:40 CST 2014
+     * @mbggenerated Wed Dec 17 17:06:20 CST 2014
      */
     public static class Criterion
     {

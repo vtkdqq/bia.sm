@@ -1,5 +1,7 @@
 package com.my.biz.sm.service.menu.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,8 +10,8 @@ import com.github.miemiedev.mybatis.paginator.domain.PageList;
 import com.my.biz.sm.commons.page.PageConvertor;
 import com.my.biz.sm.commons.page.PageData;
 import com.my.biz.sm.commons.page.PageParam;
-import com.my.biz.sm.db.MenuInfoDao;
-import com.my.biz.sm.db.MenuInfoExample;
+import com.my.biz.sm.db.sys.MenuInfoDao;
+import com.my.biz.sm.db.sys.MenuInfoExample;
 import com.my.biz.sm.model.menu.MenuInfo;
 import com.my.biz.sm.service.menu.MenuInfoService;
 
@@ -40,5 +42,18 @@ public class MenuInfoServiceImpl implements MenuInfoService {
 	public Integer addMenuInfo(MenuInfo menuInfo) {
 		return menuInfoDao.insert(menuInfo);
 	}
+
+    @Override
+    public List<MenuInfo> selectByByRoleId(Integer roleId)
+    {
+        return menuInfoDao.selectByByRoleId(roleId);
+    }
+    
+    @Override
+    public List<MenuInfo> getMenuInfoAll(MenuInfo menuInfo)
+    {
+        MenuInfoExample example = new MenuInfoExample();
+        return menuInfoDao.selectByExample(example);
+    }
 
 }

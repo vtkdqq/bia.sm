@@ -61,12 +61,13 @@ public class UserInfoController {
 		return "user/user_edit";
 	}
 
-	@RequestMapping(value = "/login", method = { RequestMethod.GET })
-	public String login() {
-		UserInfo user = appUserService.getAppUserById(1);
-		if (null != user) {
-			System.out.println("------->" + user.getUsername());
-		}
-		return "user/login";
+	@RequestMapping("login")
+	public String login(Model model,UserInfo userInfo) {
+		
+		System.out.println("------->" + userInfo.getUsername());
+		
+		return "index";
 	}
+	
+	
 }

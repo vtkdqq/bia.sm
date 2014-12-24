@@ -1,7 +1,10 @@
 package com.my.biz.sm.service.user;
 
+import java.util.List;
+
 import com.my.biz.sm.commons.page.PageData;
 import com.my.biz.sm.commons.page.PageParam;
+import com.my.biz.sm.db.sys.UserInfoExample;
 import com.my.biz.sm.model.user.UserInfo;
 
 public interface UserInfoService
@@ -21,4 +24,18 @@ public interface UserInfoService
      * @return Integer
      */
     public Integer addAppUser(UserInfo appUser);
+    
+    /**
+     * 查询返回list
+     * @param userInfo 用户对像
+     * @return
+     */
+    public List<UserInfo> selectByExample(UserInfo userInfo);
+    
+    /**
+     * 跟椐用户名查旬
+     * @param userName 用户名
+     * @return 用户对像
+     */
+    public UserInfo getUserByUserName(String userName);
 }

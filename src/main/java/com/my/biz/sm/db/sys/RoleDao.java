@@ -1,4 +1,4 @@
-package com.my.biz.sm.db;
+package com.my.biz.sm.db.sys;
 
 import java.util.List;
 
@@ -39,4 +39,11 @@ public interface RoleDao
     int updateByPrimaryKeySelective(Role record);
 
     int updateByPrimaryKey(Role record);
+    
+    /**
+     * 查询用户权限
+     * @param userId 用户id
+     * @return List<Role>
+     */
+    public List<Role> selectByByUserId(Integer userId);
 }

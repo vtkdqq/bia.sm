@@ -1,4 +1,4 @@
-package com.my.biz.sm.db;
+package com.my.biz.sm.db.sys;
 
 import java.util.List;
 
@@ -48,4 +48,12 @@ public interface MenuInfoDao {
 	int updateByPrimaryKeySelective(MenuInfo record);
 
 	int updateByPrimaryKey(MenuInfo record);
+	
+	/**
+	 * 查询权限下的模块
+	 * @param roleId 权限id
+	 * @return List<MenuInfo>
+	 */
+	public List<MenuInfo>  selectByByRoleId(Integer roleId);
+
 }
