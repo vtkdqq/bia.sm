@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import com.github.miemiedev.mybatis.paginator.domain.PageBounds;
+import com.github.miemiedev.mybatis.paginator.domain.PageList;
 import com.my.biz.sm.model.role.Role;
 
 public interface RoleDao
@@ -19,6 +21,14 @@ public interface RoleDao
     int insertSelective(Role record);
 
     List<Role> selectByExample(RoleExample example);
+    
+    /**
+     * 分页查询
+     * @param example
+     * @param pageBounds
+     * @return
+     */
+    PageList<Role> selectByExample(RoleExample example, PageBounds pageBounds);
 
     Role selectByPrimaryKey(Integer id);
 
